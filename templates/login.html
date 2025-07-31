@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Login - Cread Bank{% endblock %}
+
+{% block body_class %}login-bg{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+        <div class="card p-4 shadow">
+            <h1 class="text-center mb-4">Welcome Back</h1>
+            <form method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Authentication Image</label>
+                    <input type="file" class="form-control" id="image" name="image" accept="image/*" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
+            <p class="text-center mt-3">New to Cread Bank? <a href="{{ url_for('register') }}">Create an account</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}

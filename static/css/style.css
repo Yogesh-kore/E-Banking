@@ -1,0 +1,175 @@
+/* Modern Banking Theme */
+:root {
+    --primary-color: #1a237e;
+    --secondary-color: #0d47a1;
+    --accent-color: #2962ff;
+    --success-color: #00c853;
+    --warning-color: #ffd600;
+    --danger-color: #d50000;
+    --text-light: #ffffff;
+    --text-dark: #1a237e;
+    --background-gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    background: -webkit-linear-gradient(to right, #155799, #159957);
+    background: linear-gradient(to right, #155799, #159957);
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: rgba(26, 35, 126, 0.95) !important;
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-light) !important;
+}
+
+.nav-link {
+    color: var(--text-light) !important;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Cards and Containers */
+.container, .card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography */
+h1, h2, h3 {
+    color: var(--text-light);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/* Forms */
+.form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-light);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.2rem rgba(41, 98, 255, 0.25);
+    color: var(--text-light);
+}
+
+/* Buttons */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--accent-color);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Tables */
+.table {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.table th {
+    background: rgba(26, 35, 126, 0.3);
+    color: var(--text-light);
+    font-weight: 600;
+    border-bottom: none;
+}
+
+.table td {
+    color: var(--text-light);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Alerts */
+.alert {
+    border-radius: 8px;
+    border: none;
+    color: var(--text-dark);
+}
+
+/* Footer */
+.footer {
+    background: rgba(26, 35, 126, 0.95);
+    color: var(--text-light);
+    padding: 1rem 0;
+    margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .main-content {
+        margin: 1rem auto;
+    }
+
+    .container, .card {
+        padding: 1.5rem;
+    }
+}
+
+/* Custom Classes for Background Images */
+.login-bg, .home-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.login-bg {
+    background-image: url('../bank.jpg');
+}
+
+.home-bg {
+    background-image: url('../4893749.jpg');
+}

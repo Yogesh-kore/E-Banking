@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+
+{% block title %}Cread Bank - Services{% endblock %}
+
+{% block content %}
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 2;
+    background: -webkit-linear-gradient(to right, #155799, #159957);
+    background: linear-gradient(to right, #155799, #159957);
+    color: whitesmoke;
+    background-size: cover;
+    } 
+
+    header {
+        display: flex;
+        align-items: left;
+        justify-content: center;
+        position: sticky;
+        cursor: pointer;
+        z-index: 999;
+        background: linear-gradient(to right, #155799, #159957);
+        color: rgb(5, 13, 250);
+        background-size: cover;
+    }
+
+    nav {
+        display: flex;
+        gap: 20px;
+        background: linear-gradient(to right, #155799, #159957);
+        color: rgb(6, 35, 254);
+        background-size: cover;
+    }
+
+    nav a {
+        color: #f5f6f9;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    .container {
+        max-width: 1600px;
+        margin: 50px auto;
+        padding: 0 40px;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .service {
+        background-color: #fafafc;
+        padding: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .service:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .service h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #1b06ff;
+    }
+
+    .service p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        color: #1b06ff;
+    }
+
+    .service a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #000000;
+        color: #fcfcfd;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+        text-decoration: none;
+    }
+
+    .service a:hover {
+        background-color: #ffffff;
+        color: #000000;
+        border: 1px solid #000000;
+    }
+
+    .learn-more-button {
+        background-color: #000000;
+        color: #0b03ff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        text-decoration: none;
+        display: block;
+        margin-top: 20px;
+    }
+
+    .learn-more-button:hover {
+        background-color: #ffffff;
+        color: #000000;
+        border: 1px solid #000000;
+    }
+</style>
+
+<header>
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('contacts') }}">Contact Us</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>Our Services</h1>
+    <div class="services">
+        <div class="service" id="savings">
+            <h2>Savings Accounts</h2>
+            <p>Our savings accounts offer competitive interest rates and a range of features to help you save for your future.</p>
+            <a href="{{ url_for('home') }}" class="learn-more-button">Learn More</a>
+        </div>
+        <div class="service" id="checking">
+            <h2>Checking Accounts</h2>
+            <p>Our checking accounts come with no monthly fees and a range of features to make managing your money easy.</p>
+            <a href="#checking" class="learn-more-button">Learn More</a>
+        </div>
+        <div class="service" id="credit">
+            <h2>Credit Cards</h2>
+            <p>Our credit cards offer competitive interest rates and rewards programs to help you get the most out of your spending.</p>
+            <a href="#credit" class="learn-more-button">Learn More</a>
+        </div>
+        <div class="service" id="loans">
+            <h2>Loans</h2>
+            <p>Our loans offer competitive rates and flexible terms to help you finance your next big purchase.</p>
+            <a href="#loans" class="learn-more-button">Learn More</a>
+        </div>
+        <div class="service" id="mortgages">
+            <h2>Mortgages</h2>
+            <p>Our mortgages come with competitive rates and a range of features to help you finance your dream home.</p>
+            <a href="#mortgages" class="learn-more-button">Learn More</a>
+        </div>
+        <div class="service" id="investment">
+            <h2>Investment Accounts</h2>
+            <p>Our investment accounts offer a range of options to help you build your portfolio and achieve your financial goals.</p>
+            <a href="#investment" class="learn-more-button">Learn More</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

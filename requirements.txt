@@ -1,0 +1,4 @@
+flask
+pymongo
+pillow
+python-dotenv
